@@ -1,0 +1,17 @@
+An inkscape extension to clean up paths.
+
+Multiple actions can be performed on paths, that do not alter the apperance, but may help other 
+extensions and tools to successfully work on a path. Or change paths behaviour according to a users intent.
+
+Possible actions are
+
+* Chain Paths
+  Multiple paths or subpaths that end or start at the same point (or very close) are combined into one larger path.
+
+* Remove Duplicates
+  Paths or objects that appear in the same place multiple times are reduced to only one.
+
+* Break Apart - Keep holes
+  Separates subpaths into individual paths if they do not overlap. 
+  Similar to the builtin 'Break Apart' operation from the 'Path' menue, but preserves holes.
+
