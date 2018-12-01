@@ -11,16 +11,10 @@
 # - http://code.google.com/p/inkscape2tikz/
 # - http://code.google.com/p/eggbotcode/
 #
-# 2015-11-15 jw, V0.1 -- initial draught
-# 2015-11-16 jw, V0.2 -- fixed endpoints after chaining.
-# 2015-11-16 jw, V0.3 -- all possible chains connected. Yeah
-# 2015-11-16 jw, V0.4 -- gui fully functional.
-# 2015-11-26 jw, V0.5 -- HACK to resolve some self-reversing path segments.
-#	https://github.com/fablabnbg/inkscape-chain-paths/issues/1
-# 2018-11-26, jw, V0.6 -- the self reversing hack destroys closed paths.
+# 2015-11-30 jw, V0.1 -- initial draught
 
-__version__ = '0.5'	# Keep in sync with chain_paths.inx ca line 22
-__author__ = 'Juergen Weigert <juewei@fabmail.org>'
+__version__ = '0.1'	# Keep in sync with clean_path.inx ca line 22
+__author__ = 'Juergen Weigert <juergen@fabmail.org>'
 
 import sys, os, shutil, time, logging, tempfile, math
 

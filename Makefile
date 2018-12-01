@@ -1,10 +1,10 @@
 # a simple makefile to pull a tar ball or to release packages
 
 DEST=/usr/share/inkscape/extensions
-TARNAME=inkscape-chain-paths
+TARNAME=inkscape-clean-path
 EXCL=--exclude \*.orig --exclude \*.pyc
 ALL=README.md *.png *.sh *.rules *.py *.inx examples misc silhouette
-VERSION=$$(echo '<xml/>' | env LC_ALL=C python ./chain_paths.py --version /dev/stdin)
+VERSION=$$(echo '<xml/>' | env LC_ALL=C python ./clean_path.py --version /dev/stdin)
 
 dist:
 	cd distribute; sh ./distribute.sh

@@ -1,4 +1,4 @@
-inkscape-clean-path
+Inkscape clean-path
 ===================
 
 An inkscape extension to work around typical path issues.
@@ -16,21 +16,21 @@ extensions and tools to successfully work on a path. Or change paths behaviour a
 
 Possible actions are
 
-* Chain Paths
+* Chain Paths <br>
   Multiple paths or subpaths that end or start at the same point (or very close) are combined into one larger path.
 
-* Remove Duplicates
+* Remove Duplicates <br>
   Paths or objects that appear in the same place multiple times are reduced to only one.
 
-* Remove Duplicate Points
+* Remove Duplicate Points <br>
   Path segments of length 0 are removed from a path. Two adjacient points in a path may form a loop - 
   these are not removed.
 
-* Break Apart - Keep holes
+* Break Apart - Keep holes <br>
   Separates subpaths into individual paths if they do not overlap. 
   Similar to the builtin 'Break Apart' operation from the 'Path' menue, but preserves holes.
 
-* Resolve self-intersecting paths
+* Resolve self-intersecting paths <br>
   This is tricky. Not implemented.
 
 
@@ -70,10 +70,10 @@ Ubuntu / SUSE
 Arch Linux
 ----------
 * pacman -S inkscape
-* git clone https://github.com/fablabnbg/inkscape-chain-paths.git
+* git clone https://github.com/jnweiger/inkscape-clean-path.git
 * cd inkscape-master
 * sudo python2 setup.py build && sudo python2 setup.py install
-* sudo cp chain_paths.* /usr/share/inkscape/extensions/
+* sudo cp clean_path.* /usr/share/inkscape/extensions/
 
 Windows 
 -------
