@@ -5,13 +5,13 @@ An inkscape extension to work around typical path issues.
 Processing a complex SVG file for use with machines like LaserCutters,
 Embroidery, VinylCutter, or EggBots may fail with obscure error messages. Often
 the implementations of the drivers differ in their support of SVG corner cases.
-This extension attempts to make your SVG file suitable for such tools. 
+This extension attempts to make your SVG file suitable for such tools.
 Further suggestions welcome!
 
 Actions
 -------
 
-Multiple actions can be performed on paths, that do not alter the apperance, but may help other 
+Multiple actions can be performed on paths, that do not alter the apperance, but may help other
 extensions and tools to successfully work on a path. Or change paths behaviour according to a users intent.
 
 Possible actions are
@@ -22,22 +22,29 @@ Possible actions are
 * Remove Duplicates <br>
   Paths or objects that appear in the same place multiple times are reduced to only one.
 
+* Remove Degenerated Paths <br>
+  Paths with less than 2 points can exist in SVG, but cannot be seen or selected in inkscape.
+
 * Remove Duplicate Points <br>
-  Path segments of length 0 are removed from a path. Two adjacient points in a path may form a loop - 
+  Path segments of length 0 are removed from a path. Two adjacient points in a path may form a loop -
   these are not removed.
 
 * Break Apart - Keep holes <br>
-  Separates subpaths into individual paths if they do not overlap. 
+  Separates subpaths into individual paths if they do not overlap.
   Similar to the builtin 'Break Apart' operation from the 'Path' menue, but preserves holes.
 
 * Resolve self-intersecting paths <br>
   This is tricky. Not implemented.
 
+* Ungroup groups of one object
+
+* Remove empty groups
+
 
 Usage
 -----
 Select multiple pathlike objects. If the status line shows you different object types,
-then use "Path -> Object to Path". This is needed as we operate only on paths only. 
+then use "Path -> Object to Path". This is needed as we operate only on paths only.
 Then select "Extensions -> Modify Path -> Clean Path" to open the settings dialog.
 
 For the action 'Chain Paths' you can choose the maximum endpoint distance for
@@ -59,7 +66,7 @@ when Paths with EvenOdd rule are being processed.
 Installation
 ============
 
-Copy the two files clean_path.inx and 
+Copy the two files clean_path.inx and
 clean_path.py to your computer:
 
 Ubuntu / SUSE
@@ -75,7 +82,7 @@ Arch Linux
 * sudo python2 setup.py build && sudo python2 setup.py install
 * sudo cp clean_path.* /usr/share/inkscape/extensions/
 
-Windows 
+Windows
 -------
 * Download https://github.com/jnweiger/inkscape-clean-path/archive/master.zip
 * Navigate to your Downloads folder and double-click on **inkscape-clean-path-master.zip**
