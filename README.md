@@ -1,4 +1,4 @@
-Inkscape clean-path
+DRAFT -- Idea only -- Inkscape clean-path
 ===================
 
 An inkscape extension to work around typical path issues.
