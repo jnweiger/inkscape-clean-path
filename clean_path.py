@@ -80,7 +80,6 @@ class ChainPaths(inkex.Effect):
           type='float', dest='chain_epsilon', default=0.01, help="Max. distance to connect [mm]")
 
   def version(self):
-    print "hiuhu"
     return __version__
   def author(self):
     return __author__
